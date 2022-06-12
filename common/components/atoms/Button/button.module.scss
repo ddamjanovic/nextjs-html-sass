@@ -1,0 +1,88 @@
+@import '../../../../styles/variables.module.scss';
+
+.btn {
+  width: 188px;
+  height: 48px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 55px;
+  border-color: $primary-color;
+  font-weight: bold;
+  border-width: 3px;
+  font-weight: bolder;
+  font-size: 16px;
+  transition: transform 250ms;
+  overflow: hidden;
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  transform: scale(1.1);
+}
+
+.btnPrimarySolid {
+  background: $primary-color;
+  border: none;
+  color: white;
+}
+
+.btnPrimaryOutlined {
+  background: none;
+  border: 2px solid #24315e;
+  color: $primary-color;
+}
+
+.btnWhite {
+  background: white;
+  color: 474747;
+  border: none;
+  font-weight: normal;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.btnWhiteHover {
+  background-color: #474747;
+  border: none;
+  transition: background-color 0.5s;
+  transition: transform 500ms;
+  font-weight: 500;
+
+  &:hover {
+    transform: scale(1.1);
+    background-color: white;
+  }
+}
+
+.btnLandingPage {
+  width: 161px;
+  height: 56px;
+  min-width: 161px;
+  min-height: 56px;
+  border: 3px solid #537199;
+  color: #537199;
+  background: none;
+}
+
+.btnWide {
+  width: 26%;
+  min-width: 260px;
+}
+
+.btnTight {
+  width: 136px;
+}
+
+.btnShort {
+  height: 42px;
+}
+
+.btnSmall {
+  width: 136px;
+  height: 42px;
+}

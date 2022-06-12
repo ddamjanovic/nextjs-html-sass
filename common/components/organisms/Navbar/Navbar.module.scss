@@ -1,0 +1,414 @@
+@import '../../../../styles/variables.module.scss';
+
+.main {
+  z-index: 20;
+  .backgroundHomePage {
+    background: rgba(232, 237, 255, 0.5);
+    position: relative;
+    width: 100vw;
+  }
+
+  .customHomePageNavbar {
+    margin: auto;
+    border: none;
+    max-width: 1440px;
+  }
+
+  .customNavbar {
+    max-width: 1440px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: #ffff;
+
+    margin-left: 70px;
+
+    @include tablet-large {
+      box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.15);
+    }
+
+    .linkWrapper {
+      font-size: 16px;
+      margin-right: 43px;
+
+      button {
+        color: $light-grey;
+      }
+
+      @include tablet-large {
+        margin: 0 0 22px 0;
+      }
+
+      &:last-of-type {
+        margin-right: 0;
+      }
+    }
+
+    @include tablet-large {
+      flex-direction: column;
+      align-items: center;
+      margin-left: 0;
+      position: absolute;
+      z-index: 22;
+      top: 100%;
+      width: 100%;
+      left: 0;
+
+      transform-origin: top;
+      transition: transform 400ms ease-in-out;
+      transform: scale(1, 0);
+
+      .linkWrapper {
+        opacity: 0;
+        transition: opacity 150ms ease-in-out;
+      }
+    }
+  }
+
+  .customNavbar,
+  .customHomePageNavbar {
+    a {
+      text-decoration: none;
+      color: #474747;
+      font-weight: normal;
+    }
+    h5 {
+      padding: 5px 5px;
+      margin: 10px;
+      font-weight: normal;
+    }
+  }
+
+  .expanded {
+    transform: scale(1, 1);
+
+    .linkWrapper {
+      opacity: 1;
+      transition: all 0.4s linear 0.1s;
+    }
+  }
+
+  .loginBtn {
+    background: $primary-color;
+    color: white;
+    border: 2px solid $primary-color;
+    text-transform: uppercase;
+    padding: 8px 20px;
+    text-align: center;
+    border-radius: 55px;
+    margin-left: 20px;
+    font-size: 14px;
+
+    @include tablet-large {
+      margin-left: 0;
+    }
+  }
+
+  .mainWrapper {
+    left: 0%;
+    z-index: 25;
+    box-shadow: 0px 4px 12px rgb(0 0 0 / 15%);
+    position: fixed;
+    width: 100%;
+    background-color: #ffffff;
+
+    &:hover {
+      .none {
+        @include tablet-large-min-width {
+          display: flex;
+          align-items: center;
+        }
+      }
+
+      .logoSmall {
+        @include tablet-large-min-width {
+          width: 70px;
+          height: 40px;
+        }
+
+        img {
+          @include tablet-large-min-width {
+            width: 70px;
+            height: 40px;
+          }
+        }
+      }
+    }
+  }
+
+  .noShadow {
+    box-shadow: none;
+  }
+
+  .blue {
+    background: rgba(243, 246, 255, 1);
+  }
+
+  .blueLinks {
+    background: rgba(243, 246, 255, 1);
+
+    @include tablet-large {
+      background-color: #ffffff;
+    }
+  }
+
+  .navbar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 20px 60px;
+    z-index: 22;
+    margin: 0 auto;
+    max-width: 1440px;
+    transition: all 0.4s linear 0.1s;
+    @include tablet-large {
+      padding: 6px 60px;
+    }
+
+    .logo {
+      width: 116px;
+      height: 47px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: 0.5s;
+      cursor: pointer;
+
+      img {
+        width: 116px;
+        height: 47px;
+      }
+    }
+
+    .logoSmall {
+      width: 100%;
+      @include tablet-large {
+        width: 90px;
+      }
+      @include tablet-large-min-width {
+        width: 70px;
+        height: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 0.5s;
+        img {
+          width: 100%;
+        }
+      }
+    }
+
+    @include tablet-large {
+      justify-content: space-between;
+    }
+
+    nav {
+      @include tablet-large {
+        padding: 20px 36px 20px 36px;
+      }
+
+      button {
+        border: none;
+        background: none;
+        cursor: pointer;
+        display: flex;
+
+        .img {
+          padding-left: 7px;
+        }
+      }
+
+      .linkWrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+
+        a {
+          margin-right: 40px;
+          color: rgba(71, 71, 71, 1);
+
+          cursor: pointer;
+
+          &:last-of-type {
+            margin-right: 0;
+          }
+        }
+
+        .dot {
+          height: 6px;
+          width: 6px;
+          border-radius: 50%;
+          background: rgba(83, 113, 153, 1);
+
+          position: absolute;
+          top: 100%;
+
+          @include tablet-large {
+            display: none;
+          }
+        }
+
+        .displayNone {
+          display: none;
+        }
+      }
+
+      .current {
+        @include tablet-large {
+          a {
+            color: rgba(83, 113, 153, 1);
+          }
+        }
+      }
+    }
+  }
+
+  .langBtnGroup {
+    margin-left: auto;
+    display: block;
+
+    .langSelect {
+      font-size: 14px;
+      border: none !important;
+      background: none !important;
+      @include laptop {
+        margin-left: -45px;
+      }
+    }
+
+    @include tablet-large {
+      margin: 0;
+      display: none;
+    }
+  }
+
+  .langBtnGroupMobile {
+    display: none;
+
+    @include tablet-large {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+
+      select {
+        margin-left: 0;
+        margin-bottom: 20px;
+        font-size: 14px;
+        border: none;
+        background: none;
+      }
+    }
+  }
+
+  .buttonGroup {
+    display: flex;
+    align-items: center;
+
+    @include tablet-large {
+      flex-direction: column;
+    }
+  }
+
+  .hamburgerMenu {
+    display: none;
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+
+    div {
+      width: 100%;
+      height: 5px;
+      background-color: #000000;
+      border-radius: 3px;
+    }
+
+    div {
+      &:first-of-type {
+        margin-bottom: 5px;
+      }
+
+      &:last-of-type {
+        margin-top: 5px;
+      }
+    }
+
+    @include tablet-large {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  .homeBurger {
+    div {
+      background-color: #24315e;
+    }
+  }
+
+  .close {
+    height: 40px;
+    width: 40px;
+    border-radius: 5px;
+    position: relative;
+    display: none;
+    cursor: pointer;
+
+    &:after {
+      content: '\d7';
+
+      font-size: 50px;
+      color: #000000;
+      line-height: 100px;
+      text-align: center;
+    }
+
+    @include tablet-large {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  .homeClose {
+    &:after {
+      color: #24315e;
+    }
+  }
+
+  .isVisible {
+    display: flex;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translateY(0);
+  }
+
+  .homeNav {
+    background-color: #f3f6ff;
+  }
+
+  .none {
+    @include tablet-large-min-width {
+      display: none;
+    }
+  }
+
+  .padding {
+    @include tablet-large-min-width {
+      padding: 4px 60px;
+    }
+  }
+}
+
+.overlay {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  z-index: 20;
+  background: none;
+}

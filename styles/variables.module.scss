@@ -1,0 +1,228 @@
+//--responsive-mixins--//
+
+$mobile-small: 360px;
+
+@mixin mobile-small {
+  @media (max-width: #{$mobile-small}) {
+    @content;
+  }
+}
+
+$mobile-medium: 375px;
+
+@mixin mobile-medium {
+  @media (max-width: #{$mobile-medium}) {
+    @content;
+  }
+}
+
+$mobile-large: 414px;
+
+@mixin mobile-large {
+  @media (max-width: #{$mobile-large}) {
+    @content;
+  }
+}
+
+$mobile-extra-large: 480px;
+
+@mixin mobile-extra-large {
+  @media (max-width: #{$mobile-extra-large}) {
+    @content;
+  }
+}
+
+$tablet-extra-small: 560px;
+
+@mixin tablet-extra-small {
+  @media (max-width: #{$tablet-extra-small}) {
+    @content;
+  }
+}
+
+$tablet-small: 640px;
+
+@mixin tablet-small {
+  @media (max-width: #{$tablet-small}) {
+    @content;
+  }
+}
+
+$tablet: 768px;
+
+@mixin tablet {
+  @media (max-width: #{$tablet}) {
+    @content;
+  }
+}
+
+$tablet-medium: 850px;
+
+@mixin tablet-medium {
+  @media (max-width: #{$tablet-medium}) {
+    @content;
+  }
+}
+
+$tablet-extra-medium: 1010px;
+
+@mixin tablet-extra-medium {
+  @media (max-width: #{$tablet-extra-medium}) {
+    @content;
+  }
+}
+
+$tablet-large: 1079px;
+
+@mixin tablet-large {
+  @media (max-width: #{$tablet-large}) {
+    @content;
+  }
+}
+
+@mixin tablet-large-min-width {
+  @media (min-width: #{$tablet-large}) {
+    @content;
+  }
+}
+
+$tablet-extra-large: 1210px;
+
+@mixin tablet-extra-large {
+  @media (max-width: #{$tablet-extra-large}) {
+    @content;
+  }
+}
+
+$laptop: 1366px;
+
+@mixin laptop {
+  @media (max-width: #{$laptop}) {
+    @content;
+  }
+}
+
+$laptop-medium: 1486px;
+
+@mixin laptop-medium {
+  @media (max-width: #{$laptop-medium}) {
+    @content;
+  }
+}
+
+$laptop-large: 1686px;
+
+@mixin laptop-large {
+  @media (max-width: #{$laptop-large}) {
+    @content;
+  }
+}
+
+$desktop: 1920px;
+
+@mixin desktop {
+  @media (max-width: #{$desktop}) {
+    @content;
+  }
+}
+
+$desktop-ultrawide: 3840px;
+
+@mixin desktop-ultrawide {
+  @media (max-width: #{$desktop-ultrawide}) {
+    @content;
+  }
+}
+
+//--global-style-mixins--//
+
+@mixin mobile-small-padding {
+  padding: 30px 25px;
+}
+
+@mixin tablet-padding {
+  padding: 40px 30px;
+}
+
+@mixin global {
+  margin: auto;
+  max-width: 1440px;
+  padding: 0 100px;
+
+  @include tablet-medium {
+    @include tablet-padding;
+  }
+  @include mobile-extra-large {
+    @include mobile-small-padding;
+  }
+}
+
+@mixin margin-screens {
+  margin-top: 80px;
+  @include tablet {
+    margin-top: 0;
+  }
+}
+
+$primary-color: #537199;
+$dark-grey: #272727;
+$light-grey: #474747;
+
+//--info bot frames mixin--//
+
+@mixin infobot-frame {
+  z-index: 10;
+  cursor: pointer;
+  outline-offset: 5px;
+  outline: 2px dashed black;
+  &:hover {
+    outline: 3px dashed black;
+  }
+}
+
+@mixin infobot-larger-frame {
+  cursor: pointer;
+  border: 0.3em dashed black;
+  border-radius: 15px;
+  &:hover {
+    border: 0.35em dashed black;
+  }
+}
+
+//--animation for dropdown menu--//
+@keyframes growDown {
+  0% {
+    transform: scaleY(0);
+  }
+  80% {
+    transform: scaleY(1.1);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+
+@mixin commonScrollerStyle {
+  /* width */
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #5e80c7;
+  }
+}

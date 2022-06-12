@@ -1,0 +1,194 @@
+@import '../../../../../styles/variables.module.scss';
+
+.mainHome {
+  margin-bottom: 120px;
+  background: rgba(232, 237, 255, 0.5);
+  position: relative;
+  width: 100%;
+  padding-top: 53px;
+
+  @include tablet {
+    padding-top: 0px;
+    margin-bottom: 30px;
+  }
+
+  @include tablet-extra-medium {
+    padding-top: 0;
+  }
+
+  :before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    background: #f3f6ff;
+    z-index: -1;
+  }
+
+  :after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    top: 0;
+    right: 0;
+    width: 100vw;
+    background: #f3f6ff;
+    z-index: -1;
+  }
+
+  .content {
+    max-width: 1440px;
+    margin: auto;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-bottom: 100px;
+
+    @include tablet-extra-medium {
+      @include tablet-padding;
+    }
+
+    @include tablet {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      @include tablet-padding;
+    }
+
+    @include mobile-medium {
+      @include mobile-small-padding;
+    }
+
+    .middle {
+      display: flex;
+      // align-items: center;
+      justify-content: space-between;
+
+      @include tablet {
+        flex-direction: column;
+        align-items: unset;
+      }
+
+      .text {
+        @include tablet-extra-large {
+          margin-bottom: 50px;
+          margin-right: 20px;
+        }
+
+        @include tablet {
+          text-align: center;
+          margin-left: 0;
+        }
+
+        @include mobile-extra-large {
+          margin-left: 0;
+          margin-right: 0;
+        }
+        h1 {
+          font-size: 56px;
+          font-weight: 500;
+          padding-top: 40px;
+          color: #272727;
+
+          @include laptop {
+            font-size: 50px;
+          }
+
+          @include tablet-extra-large {
+            font-size: 45px;
+          }
+
+          @include tablet-large {
+            font-size: 42px;
+            padding-top: 25px;
+          }
+
+          @include tablet-medium {
+            font-size: 36px;
+          }
+
+          @include tablet {
+            font-size: 46px;
+          }
+
+          @include mobile-extra-large {
+            font-size: 38px;
+          }
+        }
+        p {
+          font-size: 24px;
+          font-weight: 400;
+          color: #474747;
+
+          @include laptop {
+            font-size: 22px;
+          }
+
+          @include tablet-medium {
+            font-size: 18px;
+          }
+          @include tablet {
+            padding-bottom: 25px;
+            font-size: 22px;
+          }
+
+          @include mobile-medium {
+            font-size: 23px;
+          }
+
+          @include mobile-extra-large {
+            padding: 0;
+          }
+
+          @include mobile-extra-large {
+            font-size: 18px;
+          }
+        }
+      }
+
+      .imgLayout {
+        width: 54%;
+
+        @include tablet {
+          margin: auto;
+          width: 90%;
+        }
+        @include mobile-extra-large {
+          width: 340px;
+        }
+      }
+    }
+
+    .buttonSection {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 330px;
+
+      @include tablet {
+        margin-top: 50px;
+        text-align: center;
+      }
+
+      @include mobile-extra-large {
+        justify-content: space-around;
+      }
+
+      p {
+        font-style: italic;
+        font-size: 18px;
+        color: #272727;
+
+        @include mobile-extra-large {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
+
+.btn {
+  overflow: hidden;
+}

@@ -1,0 +1,56 @@
+@import '../../../../../../styles/variables.module.scss';
+
+.main {
+  width: 100%;
+  margin-bottom: 20px;
+
+  @include mobile-extra-large {
+    margin-bottom: 20px;
+  }
+
+  .title {
+    margin-bottom: 10px;
+    @include tablet-large {
+      margin-bottom: 30px;
+    }
+
+    @include mobile-extra-large {
+      margin-bottom: 10px;
+    }
+    h1 {
+      font-size: 18px;
+      font-weight: 700;
+      color: #fff;
+    }
+  }
+  .list {
+    @include tablet-large {
+      margin-bottom: 60px;
+    }
+
+    @include mobile-extra-large {
+      margin-bottom: 40px;
+    }
+
+    @include tablet-medium {
+      margin-bottom: 0;
+    }
+    ul {
+      padding: 0;
+      li {
+        list-style: none;
+        font-size: 14px;
+        color: #fff;
+        font-weight: 400;
+        margin-bottom: 12px;
+
+        a {
+          color: inherit;
+        }
+        @include tablet-large {
+          margin-bottom: 15px;
+        }
+      }
+    }
+  }
+}

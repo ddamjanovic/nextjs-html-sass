@@ -1,0 +1,46 @@
+@import '../../../../../../styles/variables.module.scss';
+
+.main {
+  width: 100%;
+
+  .follow {
+    display: flex;
+    margin-bottom: 20px;
+
+    .images {
+      display: flex;
+      margin-left: 30px;
+    }
+
+    .imageStyle {
+      padding-bottom: 10px;
+      padding: 0 15px;
+
+      @include mobile-extra-large {
+        padding: 0 12px;
+      }
+    }
+
+    @include tablet-large {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-around;
+    }
+  }
+  .title {
+    h1 {
+      font-size: 24px;
+      font-weight: 700;
+      color: #fff;
+
+      @include mobile-small {
+        font-size: 21px;
+      }
+    }
+  }
+
+  img {
+    width: 34px;
+    padding-bottom: 10px;
+  }
+}
